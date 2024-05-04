@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Spartan', sans-serif;
+  font-size: large;
+}
+    * {
+      box-sizing: border-box;
+    }
+    
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+    
+    input[type=submit] {
+      background-color:  #0b8aa7;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+    
+    input[type=submit]:hover {
+      background-color:  #0b8aa7;
+    }
+    
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+      font-family: 'Spartan', sans-serif;
+    }
+    
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+      font-family: 'Spartan', sans-serif;
+    }
+    h2{
+        text-align: center;
+        color: #0b8aa7;
+    }
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive layout */
+      @media screen and (max-width: 600px) {
+      .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+    </style>
+<body>
+
+
+
+    <h2>Contact Us</h2>
+    <div class="container">
+      <form id="contact" action="https://formspree.io/f/xwkgwpbd" method="POST" onsubmit="return savecontact();">
+        <div class="row">
+            <div class="col-25">
+                <label for="fname">First Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." pattern="[A-Za-z ]+" title="Only letters and spaces are allowed" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="lname">Last Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.." pattern="[A-Za-z ]+" title="Only letters and spaces are allowed" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="phone">Phone No:</label>
+            </div>
+            <div class="col-75" >
+                <input  type="tel" id="phone" name="phone" placeholder="Phone no" pattern="[0-9]{10}" title="Phone number must be 10 digits" required style="width:1119px; height: 38px;">          </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="address">Address:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="address" name="address" placeholder="Your address" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="subject">Subject</label>
+            </div>
+            <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Write something about our warehouse.." style="height:200px" required></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <h2>No1 <span>MITTAI</span> Warehouse </h2><br>
+
+
+  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+    &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29930.287722412784!2d85.78365755712305!3d20.32980179359349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1908ff6c3ce59b%3A0xb8e9653b972f8077!2s359%2C%20Lane%201%2C%20Sailashree%20Vihar%2C%20Chandrasekharpur%2C%20Bhubaneswar%2C%20Odisha%20751021!5e0!3m2!1sen!2sin!4v1713502049210!5m2!1sen!2sin"
+     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <style>
+      iframe{
+        width: 1100px;
+        justify-items: center;
+        h2{
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          color: black;
+        }
+     .span{
+    color: red;
+     }
+      }
+    </style>
+      <footer class="section-p1"> 
+        <div class="col">
+            <img class="logo" src="logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>BHUBANESWAR INFOCITY WAREHOUSE, Near ITHUB  </p>
+            <p><strong>Phone:</strong>+91-9348403545</p>
+            <p><strong>Order-Hours:</strong>9.00 am - 10.00pm, Mon - Sat </p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icons">
+                    <a href="https://linktr.ee/techclipx" i class="fab fa-facebook-f"></i></a>
+                    <a href="https://linktr.ee/techclipx" i class="fab fa-twitter"></i></a>
+                    <a href="https://linktr.ee/techclipx" i class="fab fa-instagram"></i></a>
+                    <a href="https://linktr.ee/techclipx" i class="fab fa-youtube"></i></a>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About </h4>
+            <a href="service.html">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="service.html">Privacy Policy </a>
+            <a href="service.html">Terms & Conditions</a>
+            <a href="contact.html">Contact Us </a>
+        </div>
+        <div class="col">
+            <h4>My Account </h4>
+            <a href="im-ex siginin.html">Sign In</a>
+            <a href="product.html">View</a>
+            <a href="#">Make Wishlist </a>
+            <a href="#">Track My Order</a>
+            <a href="contact.html">Help </a>
+        </div>
+        <div class="col install">
+            
+         
+            <div class="row">
+                <img src="payment/pay.png" alt="">
+                <img src="payment/pay.png" alt="">
+            </div>
+            <p>Secured Payment Gatways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>©2024,Import- Export MITTAI Warehouse Service - BHUBANESWAR</p>
+        </div>
+    </footer>
+
+    
+    <script>
+        function savecontact() {
+            var fname = document.getElementById('fname').value;
+            var lname = document.getElementById('lname').value;
+            var phone = document.getElementById('phone').value;
+            var address = document.getElementById('address').value;
+            var subject = document.getElementById('subject').value;
+    
+            // Validate first name and last name
+            if (!/^[A-Za-z ]+$/.test(fname) || !/^[A-Za-z ]+$/.test(lname)) {
+                alert('Name fields must contain only letters and spaces.');
+                return false;
+            }
+    
+            // Validate phone number
+            if (!/^\d{10}$/.test(phone)) {
+                alert('Phone number must be a 10-digit number.');
+                return false;
+            }
+    
+           
+            return true;
+        }
+    </script>
+    </body>
+    </html>     
+    

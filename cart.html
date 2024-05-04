@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+  
+  
+
+  <form
+  id="order-form"
+  action="https://formspree.io/f/xwkgwpbd"
+  method="POST" style="font-size: 16px;" 
+
+>
+
+    <h1>Cart Details </h1><br> <br>
+    <form action="https://formspree.io/f/xwkgwpbd" method="POST" style="font-size: large;" onsubmit="return validateForm()">
+      <div class="form-group">
+        <label for="name">Customer Name:</label>
+        <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" title="Name should only contain letters." required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone No:</label>
+        <input type="tel" id="phone" name="phone" pattern="\d{10}" title="Phone number should be 10 digits." required>
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="product"></label>
+        <select id="product" name="product" required>
+          <option value="">Select a product</option>
+          <option value="Peda">Peda</option>
+          <option value="gulab jammu">gulab jammu</option>
+          <option value="gjak">gajak</option>
+          <option value="motichoor lodoo>motichoor lodoo</option>
+          <option value="kulfi">kulfi</option>
+          <option value="aate ki pinni">aate ki pinni</option>
+          <option value="petha">petha</option>
+          <option value="sheera">sheera</option>
+          <option value="meeti boondi">meeti boondi</option>
+          <option value="jalebi">jalebi</option>
+          <option value="sohan halwa">sohan halwa</option>
+          <option value="soan papdi">soan papdi</option>
+          <option value="ghevar">ghevar</option>
+          <option value="kaju katli">kaju katli</option>
+          <option value="arisa pitha">arisa pitha</option>
+<br>
+          <option value="">Western Mittai</option>
+
+          <option value="anarsa">anarsa</option>
+          <option value="bebinca">bebinca</option>
+          <option value="perad">perad</option>
+          <option value="surti ghari">surti ghari</option>
+          <option value="mohanthal">mohanthal</option>
+          <option value="rabdi ghevar">rabdi ghevar</option>
+          <option value="churma ladoo">churma ladoo</option>
+          <option value="moong dhal halwa">moong dhal halwa</option>
+          <option value="nervi">nervi</option>
+          <option value="shrikhand">shrikhand</option>
+          <option value="modak">modak</option>
+          <option value="nankhatai">nankhatai</option>
+          <option value="patholi">patholi</option>
+          <option value="mahim halwa">mahim halwa</option>
+          <option value="mohanthal">mohanthal</option>
+<br>
+          <option value="">North India Mittai</option>
+
+          <option value="amrit">amrit</option>
+          <option value="cham cham">cham cham</option>
+          <option value="chandrapauli">chandrapauli</option>
+          <option value="chhena gaja">chenna gaja</option>
+          <option value="coconut burfi">coconut burfi</option>
+          <option value="jaynagarer moa">jaynagarer moa</option>
+          <option value="lyangchar">lyangchar</option>
+          <option value="malpua">malpua</option>
+          <option value="mishti doi">mishti doi</option>
+          <option value="mihidana">mihidana</option>
+          <option value="pantua">pantua</option>
+          <option value="pithe">pithe</option>
+          <option value="puri khaja">puri khaja</option>
+          <option value="rasabali">rasabali</option>
+<br>
+          <option value="">South India Mittai</option>
+
+          <option value="mysore pak">mysore pak</option>
+          <option value="coconut burfi">coconut burfi</option>
+          <option value="jaangri">jaangri</option>
+          <option value="rava kesari">rava kesari</option>
+          <option value="rava unde">rava unde</option>
+          <option value="unni appam">unni appam</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="2" required>
+      </div>
+      <button type="submit">Place Order</button>
+    </form>
+    
+    <script>
+      function validateForm() {
+        var name = document.getElementById('name').value;
+        var phone = document.getElementById('phone').value;
+        var email = document.getElementById('email').value;
+    
+        // Validate name
+        if (!/^[A-Za-z\s]+$/.test(name)) {
+          alert('Name should only contain letters.');
+          return false;
+        }
+    
+        // Validate phone
+        if (!/^\d{10}$/.test(phone)) {
+          alert('Phone number should be 10 digits.');
+          return false;
+        }
+    
+        // Validate email
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+          alert('Please enter a valid email address.');
+          return false;
+        }
+    
+        return true; // Form is valid
+      }
+    </script>
+    
+   
+  <script src="order.js"></script>
+
+</body>
+</html>
